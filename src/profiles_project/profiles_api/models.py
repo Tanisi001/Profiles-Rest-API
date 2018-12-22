@@ -32,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
         user.save(using=self._db)
 
-
+        return user
 
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
