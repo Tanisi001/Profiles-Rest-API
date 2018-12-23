@@ -148,3 +148,4 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
         """Sets the user profile to the logged in user."""
 
         serializer.save(user_profile = self.request.user)
+        """done now."""
