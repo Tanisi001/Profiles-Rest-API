@@ -7,7 +7,8 @@ from . import views
 
 router = DefaultRouter()
 router.register('hello-viewset',views.HelloViewSet, base_name='hello-viewset')
-
+router.register('profile',views.UserProfileViewSet )
+"""for a model viewset you dont need to specify the base name beacuse rest_framework will auto figure this out"""
 urlpatterns = [
     url(r'^hello-view/', views.HelloApiView.as_view()),
     url(r'', include(router.urls))
